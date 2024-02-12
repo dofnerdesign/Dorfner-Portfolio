@@ -1,0 +1,1104 @@
+/* COLORS
+PINK: color: rgb(255, 65, 100);
+BEIGE: rgb(239, 239, 236); */
+
+
+@font-face {
+    font-family: "Switzer-Light";
+    src: url('../fonts/Switzer-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Switzer-Regular";
+    src: url('../fonts/Switzer-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Switzer-Medium";
+    src: url('../fonts/Switzer-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Switzer-Semibold";
+    src: url('../fonts/Switzer-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Times New Roman', Times, serif;
+    src: url();
+}
+
+* {
+    /* sonst immer kleiner rand links     */
+    margin: 0;
+    padding: 0;
+    /* verhindert dass layout verschoben wird wenn ich wo eine border habe 
+    und die breite dann anders berechnet werden muss --> */
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+
+}
+
+
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+    letter-spacing: -13;
+    text-align: left;
+}
+
+@media screen {
+    h1 {
+        font-size: 20vw;
+        letter-spacing: -0.06em;
+        line-height: 70%;
+    }
+}
+
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 50px;
+    color: rgb(255, 80, 112);
+    text-align: center;
+    word-spacing: 5px;
+    padding-top: 20px;
+    padding-bottom: 200px;
+}
+
+
+h3 {
+    font-family: "Switzer-Regular";
+    font-size: 20px;
+    word-spacing: 5px;
+    letter-spacing: 5;
+    text-transform: uppercase;
+    color: rgb(255, 65, 100);
+    text-align: center;
+}
+
+h4 {
+    font-family: "Switzer-Light";
+    font-size: 14px;
+    letter-spacing: 5;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+h6 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 45px;
+    color: black;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+
+
+
+
+.btn {
+    background-color: rgb(255, 65, 100);
+    border: none;
+    border-radius: 100px;
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3;
+    word-spacing: 10;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 100;
+    transition: 0.3s;
+}
+
+
+.btn a {
+    color: black;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: rgb(255, 255, 255);
+    transition-duration: 1s;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ___________________________________________ */
+
+/*            N A V I G A T I O N       */
+
+
+
+.navelements {
+    font-family: "Switzer-Regular";
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 6;
+    color: black;
+    font-weight: 100;
+}
+
+/* Unterstreichung der Links entfernt */
+.navelements a {
+    text-decoration: none;
+    color: black;
+}
+
+.navelements a:hover {
+    /* color: rgb(255, 64, 16); */
+    color: rgb(255, 65, 100);
+    transition: 0.5s;
+}
+
+#about {
+    text-align: left;
+    /* genauerer Abstand von Elementen zum Rand */
+    margin-left: 2px;
+}
+
+#projects {
+    text-align: right;
+}
+
+#nav {
+    display: flex;
+    /* Elemente gleichmäßig aufteilen */
+    justify-content: space-between;
+    /* Vertikale Ausrichtung in der Mitte */
+    align-items: center;
+    /* Abstand oben für die Nav-Items */
+    padding: 25px 17px;
+    position: fixed;
+    z-index: 6;
+}
+
+#nav ul {
+    /* Punkte entfernen */
+    list-style: none;
+    display: flex;
+    /* Abstand zwischen den Nav Elementen */
+    gap: 20px;
+    margin: 13px;
+    width: 100%;
+    align-items: center;
+
+
+
+}
+
+#nav li {
+    /* Spalten gleichmäßig aufteilen */
+    flex: 1;
+
+}
+
+
+
+/* Navigation responsive */
+@media screen and(max-width:768px) {
+    #nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #nav li {
+        text-align: left;
+        flex: none;
+    }
+}
+
+
+
+/* Linie Nav oben */
+#linetop {
+    z-index: 6;
+    width: 100vw;
+    height: 1px;
+    top: 50px;
+    left: 0px;
+    box-sizing: border-box;
+    position: fixed;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    background-clip: content-box;
+    /* Abstand der Linie zum Rand */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+#logo {
+    text-align: center;
+    align-items: center;
+}
+
+#logo a {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(255, 80, 112);
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+#logo a:hover {
+    transition: 0.2s;
+    text-decoration: line-through;
+    text-decoration-thickness: 1.2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ___________________________________________ */
+
+
+/*       I N T R O D U C T I O N   H O M E   */
+
+
+
+#introduction {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+    margin-left: 25px;
+}
+
+#introduction img {
+    align-content: flex-end;
+    width: auto;
+    height: 28vw;
+    padding-right: 15px;
+}
+
+#introduction h1 {
+    padding-bottom: 5vh;
+}
+
+
+h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+#description {
+    color: rgb(255, 65, 100);
+    font-family: "Switzer-Regular";
+    font-size: 22px;
+    letter-spacing: 5;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 10vh;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+@media screen and (max-width: 768px) {
+    #description {
+        font-size: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ___________________________________________ */
+
+/*    S L I D E S H O W       */
+
+
+/* Animation slide infinity */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.photos {
+    overflow: hidden;
+    padding: 5px 0;
+    padding-bottom: 4px;
+    white-space: nowrap;
+    position: relative;
+}
+
+
+.photos img {
+    height: 80vh;
+}
+
+
+.photos:before,
+.photos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+/* Farbverlauf Links */
+.photos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(239, 239, 236, 0), rgb(238, 238, 238));
+    /* Breite des Farbverlaufs */
+    width: 20vw;
+}
+
+/* Farbverlauf Rechts */
+.photos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(239, 239, 236, 0), rgb(238, 238, 238));
+    /* Breite des Farbverlaufs */
+    width: 20vw;
+}
+
+
+
+
+
+/* Beim Hover wird pausiert */
+.photos:hover .photos-slide {
+    animation-play-state: paused;
+}
+
+.photos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+    padding: 0;
+}
+
+.photos-slide img {
+    height: 50%;
+    margin: 0;
+    padding: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ____________________________________________________________ */
+/*            P R O J E C T    G A L L E R Y  */
+
+
+
+.headline-gallery {
+    padding-top: 140px;
+    padding-bottom: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.headline-gallery h1 {
+    font-weight: 100;
+    font-size: 150px;
+    letter-spacing: -6;
+    word-spacing: 10;
+    line-height: 0.8;
+    text-align: center;
+}
+
+#gallery-description {
+    font-family: "Switzer-Regular";
+    text-transform: uppercase;
+    letter-spacing: 3;
+    word-spacing: 2;
+    font-size: 16px;
+    line-height: 2;
+    color: black;
+    text-align: center;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    padding-top: 90px;
+}
+
+@media screen and (max-width: 992px) {
+    .headline-gallery h1 {
+        font-size: 130px;
+    }
+
+    .headline-gallery #gallery-description {
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .headline-gallery h1 {
+        font-size: 75px;
+        letter-spacing: -3;
+    }
+
+    .headline-gallery #gallery-description {
+        padding-left: 10vw;
+        padding-right: 10vw;
+        letter-spacing: 2;
+        line-height: 2.2;
+    }
+}
+
+
+
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.projectphoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Zuschneiden des Bildes, um es innerhalb des Containers auszufüllen */
+}
+
+@media screen and (max-width: 992px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0px;
+
+    }
+}
+
+
+
+
+
+.thumbnail::before {
+    content: '';
+    position: absolute;
+    top: -3;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    /* Bis zu dieser Höhe des Thumbnails geht der Farbverlauf */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(0, 0, 0, 0.9));
+    z-index: 1;
+    /* Farbverlauf liegt hinter dem Text */
+}
+
+.project-title {
+    position: relative;
+    /* Stellen Sie sicher, dass der Text über dem Farbverlauf liegt */
+    z-index: 2;
+    /* Stellen Sie sicher, dass der Text über dem Farbverlauf liegt */
+    color: black;
+    /* Textfarbe */
+    font-size: 18px;
+    /* Schriftgröße */
+    text-align: left;
+    /* Textausrichtung */
+    margin-top: 20px;
+    /* Platzieren Sie den Text unter dem Farbverlauf */
+    padding: 0 10px;
+    /* Fügen Sie etwas Abstand zwischen Text und Thumbnail hinzu */
+}
+
+
+
+
+.project-title {
+    position: absolute;
+    top: 10px;
+    left: 13px;
+    color: rgb(255, 65, 100);
+    font-size: 18px;
+    text-align: left;
+}
+
+.project-title h3 {
+    text-align: left;
+}
+
+
+
+#grid-footer h4 {
+    padding-top: 50px;
+    padding-bottom: 130px;
+}
+
+
+
+
+
+.headline-project {
+    padding-top: 140px;
+}
+
+.headline-project h2 {
+    font-size: 80px;
+    letter-spacing: -3;
+    word-spacing: 10;
+    padding-bottom: 40px;
+    color: black;
+}
+
+.headline-project h4 {
+    font-size: 25px;
+    padding-bottom: 40px;
+}
+
+.project-description {
+    font-family: "Switzer-Regular";
+    font-size: 18px;
+    letter-spacing: 0.1;
+    word-spacing: 1.4;
+    line-height: 1.7;
+    color: black;
+    text-align: justify;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width:768px) {
+    .headline-project h2 {
+        font-size: 70px;
+        letter-spacing: -1;
+        word-spacing: 5;
+    }
+
+    .headline-project h4 {
+        font-size: 20px;
+
+    }
+
+    .project-description {
+        font-size: 18px;
+        letter-spacing: 0.1;
+        word-spacing: 0.8;
+        line-height: 1.9;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+
+@media screen and (max-width:576px) {
+    .headline-project h2 {
+        font-size: 55px;
+        letter-spacing: -1;
+        word-spacing: 5;
+    }
+
+    .headline-project h4 {
+        font-size: 20px;
+    }
+
+    .project-description {
+        font-size: 16px;
+        letter-spacing: 0.2;
+        word-spacing: 2;
+        line-height: 1.9;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+
+.project-flex {
+    height: 110vh;
+}
+
+@media screen and (max-width: 992px) {
+    .project-flex {
+        height: 80vw;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .project-flex {
+        height: 90vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ___________________________________________ */
+
+/*          A B O U T      M E  */
+
+
+.profile-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* Vertikale Ausrichtung in der Mitte */
+    align-items: center;
+    /* Abstand oben für die Nav-Items */
+    padding-left: 40vw;
+    padding-right: 10vw;
+    padding-bottom: 80px;
+}
+
+.profile-box #profile {
+    width: 450px;
+    height: auto;
+    align-content: center;
+}
+
+.profile-box #curvedarrow {
+    height: 25vw;
+    width: auto;
+    padding-right: 30px;
+    align-content: right;
+
+}
+
+@media screen and (max-width: 992px) {
+    .profile-box #profile {
+        width: 350px;
+    }
+
+    .profile-box #curvedarrow {
+        height: 30vw;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-box #profile {
+        width: 240px;
+    }
+
+    .profile-box #curvedarrow {
+        height: 20vw;
+    }
+}
+
+.about-me {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 45px;
+
+    line-height: 1.2em;
+    color: black;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 15%;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+
+
+
+.about-me a {
+    color: black;
+    text-decoration: none;
+    text-decoration-thickness: 2px;
+}
+
+.about-me a:hover {
+    color: rgb(255, 65, 100);
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+
+.about-me #signature {
+    width: 380px;
+    height: auto;
+    justify-content: center;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .about-me {
+        font-size: 35px;
+    }
+
+    .about-me #signature {
+        width: 300px;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .about-me {
+        font-size: 25px;
+    }
+
+    .about-me #signature {
+        width: 260px;
+        height: auto;
+    }
+}
+
+
+.link-to-projects #link-to-projects-about {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+.slideshow-text {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.btn {
+    align-items: center;
+}
+
+.slideshow-text ul {
+    list-style: none;
+    gap: 30px;
+    line-height: 2.5;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .slideshow-text h3 {
+        font-size: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+    }
+}
+
+.link-to-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.link-to-projects h4 {
+    padding-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ___________________________________________ */
+
+/*            C O N T A C T   */
+
+
+
+
+
+.link-to-projects #link-to-projects-home {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+.link-to-projects-home h4 {
+    padding-top: 30px;
+}
+
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-end;
+    padding-bottom: 23%;
+    padding-right: 30px;
+
+    background-image: url(../media/at_sign.png);
+    background-size: 60vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+}
+
+.contact-form h4 {
+    padding-top: 30vh;
+    text-align: right;
+}
+
+#link-to-instagram {
+    padding-top: 0vh;
+}
+
+.contact-form h6 {
+    padding: 0;
+}
+
+.contact-form h3 a {
+    color: rgb(255, 65, 100);
+    font-family: "Switzer-Semibold";
+}
+
+.contact-form h3 {
+    padding-bottom: 10%;
+}
+
+.contact-form h5 a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+
+}
+
+.contact-form h5 {
+    font-family: "Switzer-Semibold";
+    font-size: 20px;
+    word-spacing: 5px;
+    letter-spacing: 5;
+    text-transform: uppercase;
+    color: rgb(255, 65, 100);
+    text-align: center;
+}
+
+@media screen and (max-width:992px) {
+    .contact-form {
+        background-size: 90vw;
+    }
+
+    .contact-form #invite {
+        padding-left: 30px;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width:567px) {
+    .contact-form {
+        background-size: 90vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ___________________________________________ */
+
+/*        F O O T E R  */
+
+
+
+#footer {
+    display: flex;
+    /* Elemente gleichmäßig aufteilen */
+    justify-content: space-between;
+    /* Vertikale Ausrichtung in der Mitte */
+    align-items: center;
+    /* Abstand oben für die Footer-Items */
+    padding: 25px 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 6;
+}
+
+
+
+/* Linie Footer unten */
+#linebottom {
+    z-index: 6;
+    width: 100vw;
+    height: 1px;
+    bottom: 50px;
+    left: 0px;
+    box-sizing: border-box;
+    position: fixed;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    background-clip: content-box;
+    /* Abstand der Linie zum Rand */
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+
+
+#footer ul {
+    /* Punkte entfernen */
+    list-style: none;
+    display: flex;
+    /* Abstand zwischen den Nav Elementen */
+    /* gap: 20px; */
+    /* teilt die Navelements auf Breite auf */
+    width: 100%;
+}
+
+#footer li {
+    /* Spalten gleichmäßig aufteilen */
+    flex: 1;
+}
+
+#instagram {
+    text-align: left;
+    /* genauerer Abstand von Elementen zum Rand */
+    margin-left: 10px;
+}
+
+#contact {
+    text-align: right;
+    /* genauerer Abstand von Elementen zum Rand */
+    margin-right: 5px;
+}
+
+#footer a:hover {
+    /* color: rgb(255, 64, 16); */
+    color: rgb(255, 80, 112);
+    transition: 0.2s;
+}
+
+#footer li:last-child {
+    margin-left: auto;
+}
