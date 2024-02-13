@@ -229,7 +229,7 @@ h6 {
 
 
 /* Navigation responsive */
-@media screen and(max-width:768px) {
+@media screen and(max-width:567px) {
     #nav {
         flex-direction: column;
         align-items: flex-start;
@@ -327,7 +327,7 @@ h6 {
 #introduction img {
     align-content: flex-end;
     width: auto;
-    height: 28vw;
+    height: 22vw;
     padding-right: 15px;
 }
 
@@ -561,7 +561,7 @@ h1 a {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 567px) {
     .project-grid {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 0px;
