@@ -63,7 +63,7 @@ h1 {
     }
 }
 
-@media screen and(max-width: 567px) {
+@media screen and(max-width:576px) {
     h1 {
         font-size: 15vw;
         letter-spacing: -0.06em;
@@ -237,7 +237,7 @@ h6 {
 
 
 /* Navigation responsive */
-@media screen and(max-width:567px) {
+@media screen and(max-width:576px) {
     #nav {
         flex-direction: column;
         align-items: flex-start;
@@ -363,7 +363,7 @@ h1 a {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     #description {
         font-size: 20px;
         padding-left: 30px;
@@ -527,7 +527,7 @@ h1 a {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     .headline-gallery h1 {
         font-size: 75px;
         letter-spacing: -3;
@@ -569,7 +569,7 @@ h1 a {
     }
 }
 
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 576px) {
     .project-grid {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 0px;
@@ -668,7 +668,7 @@ h1 a {
     padding-bottom: 50px;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:576px) {
     .headline-project h2 {
         font-size: 70px;
         letter-spacing: -1;
@@ -790,7 +790,7 @@ h1 a {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     .profile-box #profile {
         width: 240px;
     }
@@ -851,7 +851,7 @@ h1 a {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     .about-me {
         font-size: 25px;
     }
@@ -898,7 +898,7 @@ h1 a {
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     .slideshow-text h3 {
         font-size: 20px;
         padding-left: 30px;
@@ -1019,7 +1019,7 @@ h1 a {
     }
 }
 
-@media screen and (max-width:567px) {
+@media screen and (max-width:576px) {
     .contact-form {
         background-size: 90vh;
     }
