@@ -63,6 +63,14 @@ h1 {
     }
 }
 
+@media screen and(max-width: 567px) {
+    h1 {
+        font-size: 15vw;
+        letter-spacing: -0.06em;
+        line-height: 70%;
+    }
+}
+
 
 h2 {
     font-family: 'Times New Roman', Times, serif;
@@ -327,8 +335,8 @@ h6 {
 #introduction img {
     align-content: flex-end;
     width: auto;
-    height: 22vw;
-    padding-right: 15px;
+    height: 20vw;
+    padding-right: 10px;
 }
 
 #introduction h1 {
